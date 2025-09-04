@@ -1,0 +1,23 @@
+# Run GACL
+python interface/train_gail.py config/mujoco_WGW-v0/train_GAIL_WGW-v0-setting1.yaml -n 5
+python interface/train_gail.py config/mujoco_WGW-v0/train_GAIL_WGW-v0-setting2.yaml -n 5
+python interface/train_gail.py config/mujoco_WGW-v0/train_GAIL_WGW-v0-setting3.yaml -n 5
+python interface/train_gail.py config/mujoco_WGW-v0/train_GAIL_WGW-v0-setting4.yaml -n 5
+
+# Run BC2L
+python interface/train_icrl.py config/mujoco_WGW-v0/train_Binary_WGW-v0-setting1.yaml -n 5
+python interface/train_icrl.py config/mujoco_WGW-v0/train_Binary_WGW-v0-setting2.yaml -n 5
+python interface/train_icrl.py config/mujoco_WGW-v0/train_Binary_WGW-v0-setting3.yaml -n 5
+python interface/train_icrl.py config/mujoco_WGW-v0/train_Binary_WGW-v0-setting4.yaml -n 5
+
+# Run MECL
+python interface/train_icrl.py config/mujoco_WGW-v0/train_ICRL_WGW-v0-setting1.yaml -n 5
+python interface/train_icrl.py config/mujoco_WGW-v0/train_ICRL_WGW-v0-setting2.yaml -n 5
+python interface/train_icrl.py config/mujoco_WGW-v0/train_ICRL_WGW-v0-setting3.yaml -n 5
+python interface/train_icrl.py config/mujoco_WGW-v0/train_ICRL_WGW-v0-setting4.yaml -n 5
+
+# Run VICRL
+python interface/train_icrl.py config/mujoco_WGW-v0/train_VICRL_WGW-v0-setting1.yaml -n 5
+python interface/train_icrl.py config/mujoco_WGW-v0/train_VICRL_WGW-v0-setting2.yaml -n 5
+python interface/train_icrl.py config/mujoco_WGW-v0/train_VICRL_WGW-v0-setting3.yaml -n 5
+python interface/train_icrl.py config/mujoco_WGW-v0/train_VICRL_WGW-v0-setting4.yaml -n 5

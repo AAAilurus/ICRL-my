@@ -1,31 +1,12 @@
 
-1st run: python interface/train_icrl.py config/mujoco_WGW-discrete-v0/train_ICRL_discrete_WGW-v0-setting1.yaml
+# conda env remove -n icrl37 -y
 
+conda env create -n icrl37 -f python_environment.yml python=3.7
+conda activate icrl37
 
+mkdir save_model
+mkdir evaluate_model
 
-# step in the dir containing the "main" files.
-cd ./interface/
+python -m pip install --upgrade pip
+pip install torch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 --index-url https://download.pytorch.org/whl/cpu
 
-# run GACL
-python train_gail.py ../config/mujoco_WGW-v0/train_GAIL_WGW-v0-setting1.yaml -n 5
-python train_gail.py ../config/mujoco_WGW-v0/train_GAIL_WGW-v0-setting2.yaml -n 5
-python train_gail.py ../config/mujoco_WGW-v0/train_GAIL_WGW-v0-setting3.yaml -n 5
-python train_gail.py ../config/mujoco_WGW-v0/train_GAIL_WGW-v0-setting4.yaml -n 5
-
-# run BC2L
-python train_icrl.py ../config/mujoco_WGW-v0/train_Binary_WGW-v0-setting1.yaml -n 5
-python train_icrl.py ../config/mujoco_WGW-v0/train_Binary_WGW-v0-setting2.yaml -n 5
-python train_icrl.py ../config/mujoco_WGW-v0/train_Binary_WGW-v0-setting3.yaml -n 5 
-python train_icrl.py ../config/mujoco_WGW-v0/train_Binary_WGW-v0-setting4.yaml -n 5
-
-# run MECL
-python train_icrl.py ../config/mujoco_WGW-v0/train_ICRL_WGW-v0-setting1.yaml -n 5
-python train_icrl.py ../config/mujoco_WGW-v0/train_ICRL_WGW-v0-setting2.yaml -n 5
-python train_icrl.py ../config/mujoco_WGW-v0/train_ICRL_WGW-v0-setting3.yaml -n 5
-python train_icrl.py ../config/mujoco_WGW-v0/train_ICRL_WGW-v0-setting4.yaml -n 5
-
-# run VICRL
-python train_icrl.py ../config/mujoco_WGW-v0/train_VICRL_WGW-v0-setting1.yaml -n 5
-python train_icrl.py ../config/mujoco_WGW-v0/train_VICRL_WGW-v0-setting2.yaml -n 5
-python train_icrl.py ../config/mujoco_WGW-v0/train_VICRL_WGW-v0-setting3.yaml -n 5
-python train_icrl.py ../config/mujoco_WGW-v0/train_VICRL_WGW-v0-setting4.yaml -n 5
